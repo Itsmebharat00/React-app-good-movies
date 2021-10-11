@@ -5,7 +5,8 @@ import { useState } from "react";
 const movieList = {
   Scifi: [
     { name: "Inception", rating: "4.5/5" },
-    { name: "interstelar", rating: "5/5" }
+    { name: "interstelar", rating: "5/5" },
+    { name: "Pacific Rim", rating: "3.5/5" }
   ],
 
   animation: [
@@ -16,16 +17,24 @@ const movieList = {
     {
       name: "wreck it ralph",
       rating: "4.5/5"
+    },
+    {
+      name: "Toy story",
+      rating: "5/5"
     }
   ],
   Drama: [
     {
-      name: "forest gump",
-      rating: "4.5/5"
+      name: "Forest gump",
+      rating: "5/5"
     },
     {
       name: "Shutter island",
       rating: "5/5"
+    },
+    {
+      name: "Catch me if you can!",
+      rating: "4/5"
     }
   ]
 };
@@ -49,7 +58,7 @@ export default function App() {
             style={{
               color: "white",
               background: "#3D56B2",
-              padding: "0.5rem  2rem",
+              padding: "0.5rem  5rem",
               border: "2px solid black",
               margin: "1rem"
             }}
@@ -62,10 +71,12 @@ export default function App() {
       <div>
         <ul
           style={{
-            padding: "1rem",
+            padding: "3rem 5rem",
             listStyle: "none",
-            margin: "auto",
-            display: "block"
+            marginLeft: "100px",
+            // display: "block",
+            textAlign: "center"
+            // border: "1px solid white"
           }}
         >
           {movieList[selectedFilm].map((movie) => (
