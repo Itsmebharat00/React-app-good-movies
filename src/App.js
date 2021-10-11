@@ -9,7 +9,7 @@ const movieList = {
     { name: "Pacific Rim", rating: "3.5/5" }
   ],
 
-  animation: [
+  Animation: [
     {
       name: "Up",
       rating: "5/5"
@@ -49,7 +49,8 @@ export default function App() {
   return (
     <div className="App">
       <h1> Good movies </h1>
-      <p> Check out one of my favourite movies </p>
+      <p> Check out one of my favourite movies. </p>
+      <p>Click on the different category to get started. </p>
 
       <div>
         {Object.keys(movieList).map((film) => (
@@ -89,9 +90,9 @@ export default function App() {
               }}
             >
               <div style={{ fontSize: "1.3rem", fontWeight: "bold" }}>
-                {movie.name}
+                Movie: {movie.name}
               </div>
-              <div style={{ fontSize: "large" }}> {movie.rating} </div>
+              <div style={{ fontSize: "large" }}> Ratings: {movie.rating} </div>
             </li>
           ))}
         </ul>
